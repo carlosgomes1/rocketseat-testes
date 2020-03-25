@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Operadores Lógicos - Rocketseat </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var sexo = "M";
+            var idade = 23;
+
+            if(sexo == "M" && idade >= 18) {
+                console.log("Maior de 18 e Masculino");
+            }
+
+            if(sexo == "M" || idade >= 18) {
+                console.log("Maior de 18 ou Masculino")
+            }
+
+            if(sexo != "M") {
+                console.log("Não é Masculino");
+            }
+
+            var masculino = (sexo == "M"); // true
+
+            //              TERNARIO
+
+            var retorno = (sexo == "M") ? "Cacu" : "Feminino";
+            console.log(retorno)
+        </script>
+    </body>
+</html>

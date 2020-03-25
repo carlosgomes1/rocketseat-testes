@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Ex 01 - RocketSeat </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+                <button class="botao"> Adicionar nome a lista </button>
+            </div>
+            <div id="list">
+
+            </div>
+        </div>
+
+        <script>
+            var container = document.querySelector("div#list");
+            var newUL = document.createElement("ul");
+            var botao = document.querySelector("button.botao");
+            botao.onclick = function() {
+                var newLI = document.createElement("li");
+                newLI.textContent = document.querySelector("input#nome").value;
+                newUL.appendChild(newLI);
+                document.querySelector("input#nome").value = "";
+            }
+            container.appendChild(newUL);
+
+        </script>
+    </body>
+</html>

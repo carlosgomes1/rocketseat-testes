@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Ex 01 - RocketSeat </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button class="botao">
+            Criar novo elemento
+        </button>
+
+        <div id="container">
+            
+        </div>
+
+        <script>
+            btnCriar = document.querySelector("button[class=botao]");
+            var containerElement = document.querySelector("div#container")
+
+            btnCriar.onclick = function() {
+                var element = document.createElement("div");
+                element.style.width = "100px";
+                element.style.height = "100px";
+                element.style.margin = "10px";
+                element.style.float = "left";
+                element.style.backgroundColor = "#000";
+                containerElement.appendChild(element);
+                element.onmouseover = function() {
+                    function getRandomColor() {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+
+                    var newColor = getRandomColor();
+                        element.style.backgroundColor = newColor;
+                    };
+            }
+
+            
+
+            
+
+        </script>
+    </body>
+</html>

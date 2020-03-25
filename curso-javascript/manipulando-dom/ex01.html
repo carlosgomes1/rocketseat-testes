@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Ex 01 - RocketSeat </title>
+        <meta charset="utf-8">
+
+        <!-- Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+            vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+            aparecer na tela.
+        -->
+    </head>
+    <body>
+        <button class="botao">
+            Criar novo elemento
+        </button>
+
+        <div id="container">
+            
+        </div>
+
+        <script>
+            btnCriar = document.querySelector("button[class=botao]");
+            var containerElement = document.querySelector("div#container")
+
+            btnCriar.onclick = function() {
+                var element = document.createElement("div");
+                element.style.width = "100px";
+                element.style.height = "100px";
+                element.style.margin = "10px";
+                element.style.float = "left";
+                element.style.backgroundColor = "#000";
+                containerElement.appendChild(element);
+            }
+        </script>
+    </body>
+</html>

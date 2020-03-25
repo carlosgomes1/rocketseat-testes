@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Manipulando a DOM - RocketSeat </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome">
+            <button class="botao"> Adicionar </button>
+        </div>
+
+        <script>
+            var inputElement = document.getElementById("nome");
+            var inputElement2 = document.getElementsByTagName("input");
+            var inputElement3 = document.getElementsByClassName("nome");
+            var inputElement4 = document.querySelector("div#app input");
+
+            var btnElement = document.querySelector("button.botao");
+            var inputName = document.querySelector("input[name=nome]")
+
+            btnElement.onclick = function() {
+                var text = inputName.value;
+
+                alert(text);
+            }
+        </script>
+    </body>
+</html>

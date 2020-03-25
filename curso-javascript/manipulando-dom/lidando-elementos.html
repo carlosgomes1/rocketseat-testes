@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Manipulando os Elementos - RocketSeat </title>
+        <meta charset="utf-8">
+        <style>
+            .mudarLink {
+                font-size: 2em;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" placeholder="Digite aqui seu nome" name="nome" id="nome">
+        </div>
+
+        <script>
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("href", "https://www.youtube.com/watch?v=uoms0qNjO5Y&t=89s")
+            linkElement.setAttribute("class", "mudarLink")
+
+            var textElement = document.createTextNode("Acessar o melhor video do YouTube");
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector("#app");
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector("#nome");
+            containerElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>
