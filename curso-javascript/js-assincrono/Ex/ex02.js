@@ -36,5 +36,5 @@ function listarRepositorios( user ) {
         li.innerHTML = `${ element.name } -> <a href="https://github.com/${ element.owner.login }/${element.name}"> github.com/${ element.owner.login }/${element.name}</a>`
         ul.appendChild(li)
         div.appendChild(ul)
-    }); 
+    });
 }
